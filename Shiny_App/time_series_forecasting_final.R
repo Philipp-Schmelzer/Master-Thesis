@@ -1,7 +1,7 @@
 #Author: Philipp Schmelzer, 14-603-245
 #Masterthesis
 #Time Series Forecasting model
-#dataset: bakery_sales, 6 months of data from a bakery (October 30, 2018 to April 9, 2019)
+#dataset: bakery_sales, 6 months of transactional data from a bakery (October 30, 2018 to April 9, 2019)
 
 #1. Preparation------------------------------------------------------------------------------
 #Load Libraries
