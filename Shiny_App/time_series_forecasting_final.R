@@ -646,7 +646,7 @@ indx <- sapply(predicted_values_df, is.character)
 predicted_values_df[indx] <- lapply(predicted_values_df[indx], function(x) as.numeric(as.character(x)))
 predicted_values_df <- round(predicted_values_df, digits=0)
 colnames(predicted_values_df) <- as.character(time_series_test$Date)
-View(predicted_values_df)
+# View(predicted_values_df)
 
 #save table as csv
 write.csv(predicted_values_df, paste0(folderdir, "/predicted_values_df.csv", sep= ""), row.names = TRUE)
@@ -802,8 +802,6 @@ value <- c("actual", "actual", "actual","actual", "actual", "actual","actual")
 weekday_actual_long$value <- value
 
 ##weekly_values_long
-str(weekday_actual_long)
-str(weekday_predicted_long)
 weekday_long <- full_join(weekday_predicted_long, weekday_actual_long)
 weekday_long <- weekday_long[c(1,8,2,9,3,10,4,11,5,12,6,13,7,14),]
 
@@ -839,8 +837,6 @@ value <- c("actual", "actual", "actual","actual", "actual", "actual","actual")
 weekday_act_total_long$value <- value
 
 ##total_values_long
-str(weekday_pred_total_long)
-str(weekday_act_total_long)
 total_values_long <- full_join(weekday_pred_total_long, weekday_act_total_long)
 total_values_long <- total_values_long[c(1,8,2,9,3,10,4,11,5,12,6,13,7,14),]
 
@@ -1405,13 +1401,6 @@ plot
 # save plots as .png
 ggsave(plot, file=paste(results,"Spanish Brunch.png", sep=''), height=7, width=10, units="in", dpi=150)
 
-
-
-
-
-
-
-
 #8.2.1 Plots regarding individual items_weekly_without_prediction------------------------------------------------------------------------------
 
 plot <- ggplot(weekday_df) +
@@ -1730,7 +1719,6 @@ plot
 
 # save plots as .png
 ggsave(plot, file=paste(results,"Spanish Brunch_w_o.png", sep=''), height=7, width=10, units="in", dpi=150)
-
 
 
 #8.3 Plots regarding individual items_monthly_with_prediction-------------------------------------
