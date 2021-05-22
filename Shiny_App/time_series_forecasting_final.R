@@ -469,7 +469,7 @@ RSME_total <-mean(performance_collector_total)
 varImp_total <- varImpPlot(tsforest_total, main = "Total Products")
 #6. Analysis------------------------------------------------------------------------------
 #What are the relevant products / items?
-# Filte for the relevant Items regarding weekly mean of demand
+# Filter for the relevant Items regarding weekly mean of demand
 mean_collector = c()
 # create mean for every product/column
 for (c in items) {
@@ -529,7 +529,7 @@ colnames(time_series_test) <- "Date"
 write.csv(time_series_test, paste0(folderdir, "/time_series_test.csv", sep= ""), row.names = TRUE)
 
 #7.3 Final table with prediction and actual values------------------------------------------------------------------------------
-#give final_table meaningfull rownames
+#give final_table meaningful rownames
 row_names_df <- c("bread_predicted_KW11","bread_predicted_KW12","bread_predicted_KW13","bread_predicted_KW14",
                   "bread_actual_KW11","bread_actual_KW12","bread_actual_KW13","bread_actual_KW14",
                   "Scandinavian_predicted_KW11","Scandinavian_predicted_KW12","Scandinavian_predicted_KW13","Scandinavian_predicted_KW14",
@@ -588,7 +588,7 @@ final_table[indx] <- lapply(final_table[indx], function(x) as.numeric(as.charact
 final_table$Goods=NULL
 final_table$Goods <- goods
 
-#create seperate df with predicted and actual values
+#create separate df with predicted and actual values
 final_table$Values <- c("predicted","predicted","predicted","predicted","actual","actual","actual","actual",
                         "predicted","predicted","predicted","predicted","actual","actual","actual","actual",
                         "predicted","predicted","predicted","predicted","actual","actual","actual","actual",
@@ -640,9 +640,13 @@ predicted_values_df$Toast <- c(predicted_values[,73],predicted_values[,74],predi
 predicted_values_df$Scone <- c(predicted_values[,77],predicted_values[,78],predicted_values[,79],predicted_values[,80])
 predicted_values_df$Spanish_Brunch <- c(predicted_values[,81],predicted_values[,82],predicted_values[,83],predicted_values[,84])
 predicted_values_df <-t(predicted_values_df)
+predicted_values_df <- as.data.frame(predicted_values_df)
+#convert character back to numeric
+indx <- sapply(predicted_values_df, is.character)
+predicted_values_df[indx] <- lapply(predicted_values_df[indx], function(x) as.numeric(as.character(x)))
 predicted_values_df <- round(predicted_values_df, digits=0)
 colnames(predicted_values_df) <- as.character(time_series_test$Date)
-# View(predicted_values_df)
+View(predicted_values_df)
 
 #save table as csv
 write.csv(predicted_values_df, paste0(folderdir, "/predicted_values_df.csv", sep= ""), row.names = TRUE)
@@ -677,6 +681,10 @@ actual_values_df$Toast <- c(actual_values[,73],actual_values[,74],actual_values[
 actual_values_df$Scone <- c(actual_values[,77],actual_values[,78],actual_values[,79],actual_values[,80])
 actual_values_df$Spanish_Brunch <- c(actual_values[,81],actual_values[,82],actual_values[,83],actual_values[,84])
 actual_values_df <-t(actual_values_df)
+actual_values_df <- as.data.frame(actual_values_df)
+#convert character back to numeric
+indx <- sapply(actual_values_df, is.character)
+actual_values_df[indx] <- lapply(actual_values_df[indx], function(x) as.numeric(as.character(x)))
 actual_values_df <- round(actual_values_df, digits=0)
 colnames(actual_values_df) <- as.character(time_series_test$Date)
 # View(actual_values_df)
