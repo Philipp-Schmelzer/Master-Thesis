@@ -972,7 +972,7 @@ plot_total_sales <- plot_total_sales[-c(11:94),]
 Top10_Products <- ggplot(plot_total_sales) +
   geom_bar( aes(x= reorder(Item, -quantity), y=quantity), stat="identity", fill="skyblue", position = 'dodge', alpha=0.7) +
   ggtitle("Top10 Produkte") +
-  xlab("Prodult") + ylab("Anzahl") +
+  xlab("Produkt") + ylab("Anzahl") +
   geom_text(aes(x=Item, y=quantity, label=quantity), position=position_dodge(width=0.9), vjust=-0.25) + 
   theme(text = element_text(size=20))
 
