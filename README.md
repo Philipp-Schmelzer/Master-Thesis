@@ -10,3 +10,5 @@ Procedure for starting the app.
 4. Install and initialise the necessary R packages for both the R-Code and the Shiny R implementation.
 5. Execute the R code.
 6. Start the application in either the "global.R", "server.R" or "ui.R" file.
+
+The web application is optimised for full screen use on a 13 inch screen. On smaller screens, there may be some displacement of the user interface.
