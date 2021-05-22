@@ -1,0 +1,8 @@
+﻿step;text
+1;Die App besitzt insgesamt 4 verschiedene Menüs und eine Eingabemaske. 
+2;In der Eingabemaske können Sie das zu betrachtende Datum auswählen und, falls nötig, die Anzahl der benötigten Menüs anpassen.
+3;In der Bedarfsvorhersage sehen Sie die Menüvorhersage für den ausgewählten Tag. Die gesamte Anzahl der vorhergesagten Menüs sowie den dazugehörigen Wert aus der Vergleichsperiode. Ausserdem sehen Sie die Faktoren, die die Vorhersage beeinflussen. 
+4;Weiter unten sehen Sie die drei vorgeschlagenen Menüs mit der vorhergesagten Anzahl und dem Vergleichswert. Wenn das Menü Ihnen nicht zusagt, können Sie es über die Schaltfläche anpassen. Auf der rechten Seite finden Sie drei weitere Vorschläge basierend auf der ursprünglichen Empfehlung.
+5;"In der Wochenübersicht sehen Sie den ausgewählten Tag und die vier darauffolgenden Tage. 
+Im Bedarfsverlauf Fenster sehen Sie verschiedene Grafiken, mit Hilfe derer Sie die Menüs in ihrer Gesamtheit und individuell analysieren können. 
+In den Erklärungen finden Sie noch einmal die wichtigsten Funktionalitäten und Elemente im Detail erklärt."
