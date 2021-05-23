@@ -14,7 +14,7 @@ Procedure for starting the app.
 2. Unpack the ZIP File "Master-Thesis-main"
 3. Set the local working directory to the folder "Shiny_App" within the Master-Thesis-main folder .
 4. Install and initialise the necessary R packages for both the R-Code and the Shiny R implementation.
-5. Execute the R code.
+5. Execute the R code. After running the code, there should be a new folder "prediction_output" with the various outputs in        .csv files. The folder "www" should now contain the plots of the prediction results.
 6. Start the application in either the "global.R", "server.R" or "ui.R" file.
 
 The web application is optimised for full screen use on a 13 inch screen. On smaller screens, there may be some displacement of the user interface.
