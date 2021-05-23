@@ -2,7 +2,7 @@
 
 This is the documentation of the R code and the code of the Shiny R implementation of the master thesis by Philipp Schmelzer (philipp.schmelzer@student.unisg.ch).
 
-The documentation of the Expert and Evaluationinterviews can be found in the "Interview" folder. 
+The documentation of the expert and evaluation interviews can be found in the "Interview" folder. 
 
 A total of three files can be found in the Shiny_App folder. The data set used is stored in "bakery_sales.csv". The programmed R code for the random forest is stored in "time_series_forecasting_final.R". The "Shiny" folder contains the files for the implementation of the Shiny R website. The files "global.R", "server.R" and "ui.R" are the code parts necessary for the implementation. The files "intro.csv" and "introtext" are the text modules that are displayed in the landing page and the intro tour through the web page. The icons used in the visualisation are stored in the "www" folder. The plots of the random forest algorithm are also stored here. The results of the random forest algorithm are stored in the folder "prediction_output".
 
