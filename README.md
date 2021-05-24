@@ -4,6 +4,7 @@ This is the repository dedicated to the master thesis by Philipp Schmelzer (phil
 
 The documentation of the expert and evaluation interviews can be found in the "Interview" folder. 
 The documentation of the design workshop is available in the folder "Design Workshop".
+The whole master thesis as a PDF file can be found in the folder "Thesis".
 
 A total of three files can be found in the Shiny_App folder. It documents the R code and the code of the Shiny R implementation as well as the employed data set of the master thesis. 
 
